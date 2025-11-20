@@ -33,7 +33,27 @@ Este documento serve como um glossário técnico detalhado, explicando a funçã
 
 ---
 
-## 2. Qualidade de Código (QA)
+## 2. Configuração do Motor PHP (`php.ini`)
+
+Para que o Laravel funcione sem erros fatais, o interpretador PHP depende de configurações específicas no arquivo de inicialização `php.ini`.
+
+### O Papel do `php.ini`
+É o arquivo central de configuração que dita como o PHP se comporta. Ele define limites de memória, tempo de execução e, o mais importante, quais **Extensões (Módulos)** estão ativas.
+
+### Extensões Críticas Utilizadas
+Neste boilerplate, a aplicação quebrará imediatamente se as seguintes extensões não estiverem carregadas:
+
+* **`pdo_pgsql`**: O Laravel usa a camada PDO para conversar com o banco. Sem o driver `pgsql` ativo no `php.ini`, a conexão será recusada.
+* **`mbstring`**: Responsável por lidar com strings "Multibyte" (como acentos e emojis). Sem ela, funções de texto falharão ao processar caracteres UTF-8.
+* **`openssl`**: O Laravel exige criptografia forte para gerar chaves de sessão e senhas (Bcrypt/Argon2). Sem OpenSSL, a segurança da aplicação é nula.
+* **`tokenizer` / `xml`**: O framework precisa ler seus próprios arquivos de configuração e rotas. Essas extensões permitem que o PHP faça o "parse" desses arquivos.
+* **`fileinfo`**: Garante a segurança em uploads, verificando o tipo real do arquivo (MIME type) para evitar que alguém envie um vírus disfarçado de imagem.
+
+> **Contexto Docker:** No nosso ambiente `compose.yaml`, a imagem base do Sail já possui um `php.ini` customizado com todas essas flags habilitadas (`extension=...`), garantindo compatibilidade zero-configuração.
+
+---
+
+## 3. Qualidade de Código (QA)
 
 ### 🔍 Análise Estática
 É o processo de analisar o código-fonte sem executá-lo, buscando padrões que indicam erros lógicos ou de sintaxe.
@@ -55,7 +75,7 @@ Este documento serve como um glossário técnico detalhado, explicando a funçã
 
 ---
 
-## 3. Testes Automatizados
+## 4. Testes Automatizados
 
 ### 🧪 PHPUnit / Pest
 * **O que são:** Frameworks de teste para PHP.
@@ -65,7 +85,7 @@ Este documento serve como um glossário técnico detalhado, explicando a funçã
 
 ---
 
-## 4. Ferramentas de Desenvolvimento (DX)
+## 5. Ferramentas de Desenvolvimento (DX)
 
 ### 📦 Composer
 * **O que é:** O gerenciador de dependências oficial do PHP.
@@ -84,7 +104,7 @@ Este documento serve como um glossário técnico detalhado, explicando a funçã
 
 ---
 
-## 5. Automação e Integração Contínua
+## 6. Automação e Integração Contínua
 
 ### 🤖 CI/CD (GitHub Actions)
 * **O que é:** Um serviço de automação de fluxo de trabalho integrado ao GitHub.

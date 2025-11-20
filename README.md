@@ -1,4 +1,6 @@
-# Laravel 10 - Boilerplate Profissional
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+
+# Boilerplate Profissional
 
 ![Laravel](https://img.shields.io/badge/Laravel-10-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
@@ -34,6 +36,27 @@ Tudo já configurado para um ambiente profissional e escalável, ideal tanto par
 ---
 
 ## 🚀 Instalação
+
+### ⚙️ Requisitos do Ambiente (php.ini)
+
+Caso opte por rodar o projeto **sem Docker** (instalação nativa), garanta que as seguintes extensões estejam habilitadas no seu arquivo `php.ini`:
+
+- `ctype`
+- `curl`
+- `dom`
+- `fileinfo`
+- `filter`
+- `hash`
+- `mbstring`
+- `openssl`
+- `pcre`
+- `pdo`
+- `pdo_pgsql` (Driver do Banco de Dados)
+- `session`
+- `tokenizer`
+- `xml`
+
+> **Nota:** Se estiver usando **Laravel Sail (Docker)**, pode ignorar esta lista. O container já vem com todas essas extensões configuradas e otimizadas automaticamente.
 
 ### 1. Clone o Repositório
 ```bash
