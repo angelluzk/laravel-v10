@@ -1,4 +1,4 @@
-# Laravel 10 — Boilerplate Profissional
+# Laravel 10 - Boilerplate Profissional
 
 ![Laravel](https://img.shields.io/badge/Laravel-10-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
@@ -37,7 +37,7 @@ Tudo já configurado para um ambiente profissional e escalável, ideal tanto par
 
 ### 1. Clone o Repositório
 ```bash
-git clone https://github.com/angelluzk/laravel-v10.git
+git clone https://github.com/SEU-USUÁRIO/laravel-v10.git
 cd laravel-v10
 ```
 
