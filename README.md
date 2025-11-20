@@ -133,6 +133,12 @@ Tudo isso ao enviar alterações para a branch `main`.
 
 ---
 
+## 📚 Documentação Adicional
+Quer entender profundamente as ferramentas usadas neste projeto?
+Leia a [Documentação de Conceitos Técnicos](./CONCEITOS_TECNICOS.md).
+
+---
+
 ## 👩‍🎓 Autoria
 
 <img src="https://github.com/angelluzk.png" width="100px;" alt="Foto de Angel Luz"/>
