@@ -1,66 +1,155 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel 10 — Boilerplate Profissional
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-10-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-## About Laravel
+[![Build Status](https://github.com/angelluzk/laravel-v10/actions/workflows/laravel.yml/badge.svg)](https://github.com/angelluzk/laravel-v10/actions)
+![Code Style](https://img.shields.io/badge/Code%20Style-Laravel%20Pint-blue)
+![Static Analysis](https://img.shields.io/badge/Static%20Analysis-Larastan-yellow)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> **Starter moderno e “Enterprise-Ready” com Docker Compose V2, ferramentas de QA, análise estática, testes e CI/CD configurados.**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📋 Sobre o Projeto
 
-## Learning Laravel
+Este repositório fornece uma fundação sólida para projetos em **Laravel 10**, com foco em qualidade, padronização, testes e automação.  
+Tudo já configurado para um ambiente profissional e escalável, ideal tanto para estudos quanto para uso corporativo.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🛠️ Tecnologias e Recursos
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Framework:** Laravel 10  
+- **Linguagem:** PHP 8.2+  
+- **Banco de Dados:** PostgreSQL 16 (Docker)  
+- **Ambiente de Desenvolvimento:** Laravel Sail (Docker Compose V2)  
+- **Code Style:** Laravel Pint (PSR-12)  
+- **Análise Estática:** Larastan (PHPStan – Level 5)  
+- **CI/CD:** GitHub Actions  
+- **Extras:** IDE Helper, Redis, Mailpit
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🚀 Instalação
 
-### Premium Partners
+### 1. Clone o Repositório
+```bash
+git clone https://github.com/angelluzk/laravel-v10.git
+cd laravel-v10
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 2. Instale as Dependências
 
-## Contributing
+#### Opção A — Composer Local
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+composer install
+```
 
-## Code of Conduct
+#### Opção B — Composer via Docker
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+docker run --rm -u "$(id -u):$(id -g)" \
+  -v "$(pwd):/var/www/html" -w /var/www/html \
+  laravelsail/php82-composer:latest \
+  composer install --ignore-platform-reqs
+```
 
-## Security Vulnerabilities
+### 3. Configure o Ambiente
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+cp .env.example .env
+./vendor/bin/sail up -d
+```
 
-## License
+Garanta no `.env`:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+DB_CONNECTION=pgsql
+DB_PORT=5432
+```
+
+### 4. Setup Final
+
+```bash
+./vendor/bin/sail artisan key:generate
+./vendor/bin/sail artisan migrate
+```
+
+Aplicação disponível em:
+**[http://localhost](http://localhost)**
+
+---
+
+## 🛡️ Qualidade e Ferramentas de QA
+
+### 🎨 Formatação — Laravel Pint
+
+```bash
+./vendor/bin/sail bin pint
+```
+
+### 🔎 Análise Estática — Larastan
+
+```bash
+./vendor/bin/sail bin phpstan analyse
+```
+
+### 🧪 Testes Automatizados
+
+```bash
+./vendor/bin/sail artisan test
+```
+
+### 🧠 Atualizar IDE Helper
+
+```bash
+./vendor/bin/sail artisan ide-helper:generate
+```
+
+---
+
+## 🤖 CI/CD — GitHub Actions
+
+O workflow `laravel.yml` executa automaticamente:
+
+1. Verificação de padrão de código (Pint)
+2. Análise estática (Larastan)
+3. Testes completos
+
+Tudo isso ao enviar alterações para a branch `main`.
+
+---
+
+## 📂 Arquivos Importantes
+
+* **compose.yaml** — Serviços Docker (App, DB, Redis, Mailpit)
+* **phpstan.neon** — Regras do PHPStan / Larastan
+* **pint.json** — Configurações do Laravel Pint
+* **.editorconfig** — Padronização entre editores
+
+---
+
+## 👩‍🎓 Autoria
+
+<img src="https://github.com/angelluzk.png" width="100px;" alt="Foto de Angel Luz"/>
+
+> Desenvolvido com 💛 por **Angel Luz**.
+
+Se quiser conversar, colaborar ou oferecer uma oportunidade:
+
+📬 E-mail: [contatoangelluz@gmail.com](mailto:contatoangelluz@gmail.com)  
+🐙 GitHub: [@angelluzk](https://github.com/angelluzk)  
+💼 LinkedIn: [linkedin.com/in/angelitaluz](https://www.linkedin.com/in/angelitaluz/)  
+🗂️Website / Portfólio: [meu_portfolio/](https://angelluzk.github.io/meu_portfolio/) 
+
+-----
+
+<div align="center">
+
+> “Transformando código em fluxo, e ideias em movimento.”
+
+</div>
