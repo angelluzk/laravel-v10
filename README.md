@@ -3,6 +3,7 @@
 # Boilerplate Profissional
 
 ![Laravel](https://img.shields.io/badge/Laravel-10-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+[![Documentation](https://img.shields.io/badge/Docs-Laravel_10.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com/docs/10.x)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&&logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
@@ -19,6 +20,18 @@
 
 Este repositório fornece uma fundação sólida para projetos em **Laravel 10**, com foco em qualidade, padronização, testes e automação.  
 Tudo já configurado para um ambiente profissional e escalável, ideal tanto para estudos quanto para uso corporativo.
+
+---
+
+## 📚 Documentação de Referência
+
+Centralizamos aqui todos os manuais necessários para trabalhar neste projeto:
+
+* **📖 [Documentação Oficial do Laravel 10](https://laravel.com/docs/10.x)** Referência completa sobre o framework, rotas, controllers e segurança.
+
+* **📘 [Guia Técnico do Projeto](./GUIA_TECNICO.md)** Entenda as decisões de arquitetura e o uso do `docker-compose.yml` clássico.
+
+* **📙 [Conceitos Técnicos & Glossário](./CONCEITOS_TECNICOS.md)** Explicação detalhada sobre Sail, Pint, Larastan e configurações do PHP.
 
 ---
 
@@ -153,12 +166,6 @@ Tudo isso ao enviar alterações para a branch `main`.
 * **phpstan.neon** — Regras do PHPStan / Larastan
 * **pint.json** — Configurações do Laravel Pint
 * **.editorconfig** — Padronização entre editores
-
----
-
-## 📚 Documentação Adicional
-Quer entender profundamente as ferramentas usadas neste projeto?
-Leia a [Documentação de Conceitos Técnicos](./CONCEITOS_TECNICOS.md).
 
 ---
 
